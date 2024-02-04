@@ -88,7 +88,7 @@ function formatCountdown(countdownOptions) {
             const minutes = Math.floor((((((countdownOptions.value % 1) * 12 % 1) * 4.34524 % 1) * 7 % 1) * 24 % 1) * 60);
             const seconds = Math.floor(((((((countdownOptions.value % 1) * 12 % 1) * 4.34524 % 1) * 7 % 1) * 24 % 1) * 60 % 1) * 60);
 
-            return `${years} Years, ${months} Months, ${weeks} Weeks, ${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
+            return `${years} Years <br> ${months} Months <br> ${weeks} Weeks <br> ${days} Days <br> ${hours} Hours <br> ${minutes} Minutes <br> ${seconds} Seconds`;
         } else {
             return `${countdownOptions.value.toFixed(3)} ${countdownOptions.unit}`;
         }
