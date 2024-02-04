@@ -150,6 +150,7 @@ let newYearCountDownDate = calculateNewYearCountdownDate();
 const valentineCountdown = setInterval(function() {
     updateCountdown(valentineCountDownDate, "valentineCountdown");
     if (isEventDay(valentineCountDownDate)) {
+        document.getElementById("valentineCountdown").innerHTML = `Happy Valentine's Day!`;
         setBackground('valentine.jpg');
     } else {
         setBackground('default.jpg');
@@ -160,6 +161,7 @@ const valentineCountdown = setInterval(function() {
 const easterCountdown = setInterval(function() {
     updateCountdown(easterCountDownDate, "easterCountdown");
     if (isEventDay(easterCountDownDate)) {
+        document.getElementById("easterCountdown").innerHTML = `Happy Easter!`;
         setBackground('easter.jpg');
     } else {
         setBackground('default.jpg');
@@ -170,6 +172,7 @@ const easterCountdown = setInterval(function() {
 const christmasCountdown = setInterval(function() {
     updateCountdown(christmasCountDownDate, "christmasCountdown");
     if (isEventDay(christmasCountDownDate)) {
+        document.getElementById("christmasCountdown").innerHTML = `Merry Christmas!`;
         setBackground('christmas.jpg');
     } else {
         setBackground('default.jpg');
@@ -180,6 +183,7 @@ const christmasCountdown = setInterval(function() {
 const newYearCountdown = setInterval(function() {
     updateCountdown(newYearCountDownDate, "newYearCountdown");
     if (isEventDay(newYearCountDownDate)) {
+        document.getElementById("newYearCountdown").innerHTML = `Happy New Year!`;
         setBackground('newyear.jpg');
     } else {
         setBackground('default.jpg');
