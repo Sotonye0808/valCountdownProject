@@ -61,7 +61,7 @@ function updateCountdown(countdownDate, elementId) {
     document.getElementById(elementId).innerHTML = formatCountdown(countdownOptions);
 
     if (duration < 0) {
-        clearInterval(x);
+        clearInterval(customCountdownInterval);
         document.getElementById(elementId).innerHTML = "Event has passed";
     }
 }
@@ -71,11 +71,10 @@ function updateCountdownOptions(countdownDate, elementId) {
     document.getElementById(elementId).innerHTML = formatCountdown(countdownOptions);
 
     if (countdownDate < new Date().getTime()) {
-        clearInterval(x);
+        clearInterval(customCountdownInterval);
         document.getElementById(elementId).innerHTML = "Event has passed";
     }
 }
-
 
 function formatCountdown(countdownOptions) {
     if (countdownOptions && countdownOptions.value !== undefined) {
@@ -96,7 +95,6 @@ function formatCountdown(countdownOptions) {
         return "Invalid option!";
     }
 }
-
 
 // Function to calculate countdown date for Valentine's Day of the current year
 function calculateValentineCountdownDate() {
@@ -192,10 +190,18 @@ const newYearCountdown = setInterval(function() {
 
 // Function to handle the user-defined countdown
 document.getElementById("customDateInput").addEventListener("change", function () {
-    const customDate = new Date(this.value).getTime();
-    updateCountdownOptions(customDate, "customCountdown");
+    customCountDownDate = new Date(this.value).getTime();  // Update customCountDownDate
+    updateCountdownOptions(customCountDownDate, "customCountdown");
     setBackground('default.jpg');
 });
+
+// Interval for updating the custom countdown every 1 second
+const customCountdownInterval = setInterval(function() {
+    updateCountdown(customCountDownDate, "customCountdown");
+    if (isEventDay(customCountDownDate)) {
+        setBackground('default.jpg');
+    }
+}, 1000);
 
 document.getElementById("countdownOptionsSelect").addEventListener("change", function () {
     const customDate = new Date(document.getElementById("customDateInput").value).getTime();
