@@ -93,7 +93,7 @@ function formatCountdown(countdownOptions) {
             return `${countdownOptions.value.toFixed(3)} ${countdownOptions.unit}`;
         }
     } else {
-        return "Invalid option";
+        return "Invalid option!";
     }
 }
 
