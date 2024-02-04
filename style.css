@@ -1,89 +1,74 @@
-body{
-    background-image: url(124.jpg);
+body {
+    background-image: url(default.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 95vh;
+    height: 100vh;
+    margin: 0;
 }
 
-.glass{
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.glass {
     flex: 1;
-    width: 85vw;
-    height: 50vh;
-    border-radius: 30px;
-    box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 1);
+    width: 30%;
+    margin: 1%;
+    padding: 1%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-block-start: 0%;
-    margin-block-end: 0;
-    margin-inline-start: 5%;
-    margin-inline-end: 5%;
-
 }
 
-h1{
+h1 {
     color: orangered;
-    font-size: 250%; 
+    font-size: 18px;
     font-family: cursive;
-    text-align: center; 
-    margin: 5%;
-    padding: 0px; 
-    order: 1;
+    text-align: center;
+    margin: 10px 0;
 }
 
-p{
+p {
     color: aquamarine;
     background-color: purple;
     padding: 10px;
-    margin: 0px;
-    border-style: double;
-    border-radius: 35px;
-    font-weight: bolder;
+    border-radius: 15px;
+    font-weight: bold;
     font-family: cursive;
-    font-size: 150%;
+    font-size: 16px;
     text-align: center;
-    order: 2;
-    display: block;
-    margin: 10%;
-    margin-block-start: 0%;
-    margin-block-end: 0%;
-    margin-inline-start: 20%;
-    margin-inline-end: 20%;
-
+    margin: 10px 0;
 }
 
-@media (max-width: 768px){
-    .glass{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 75vh;
+input {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid orangered;
+    box-sizing: border-box;
+}
+
+#countdownOptions {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .glass {
+        width: 45%;
     }
-    p{
-    margin-block-start: 5%;
-    margin-block-end: 0%;
-    margin-inline-start: 15%;
-    margin-inline-end: 15%;
-    }    
 }
 
-
-@media (max-width: 350px){
-    .glass{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 75vh;
+@media (max-width: 480px) {
+    .glass {
+        width: 100%;
     }
-    p{
-    margin-block-start: 0%;
-    margin-block-end: 0%;
-    margin-inline-start: 15%;
-    margin-inline-end: 15%;
-    }    
 }
-

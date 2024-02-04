@@ -7,11 +7,48 @@
     <title>Countdown Timer Project</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div class="glass">
-      <h1>It will be Valentine's Day in:</h1>
-      <p id="demo"></p>
+  <body id="background">
+    <div class="container">
+      <div class="glass">
+        <h1>Valentine's Day Countdown</h1>
+        <p id="valentineCountdown"></p>
+      </div>
+
+      <div class="glass">
+        <h1>Easter Countdown</h1>
+        <p id="easterCountdown"></p>
+      </div>
+
+      <div class="glass">
+        <h1>Christmas Countdown</h1>
+        <p id="christmasCountdown"></p>
+      </div>
+
+      <div class="glass">
+        <h1>New Year Countdown</h1>
+        <p id="newYearCountdown"></p>
+      </div>
+
+      <div class="glass">
+        <h1>Custom Countdown</h1>
+        <input type="datetime-local" id="customDateInput" />
+        <p id="customCountdown"></p>
+        <div id="countdownOptions">
+          <label>Countdown Options:</label>
+          <select id="countdownOptionsSelect">
+            <option value="all">All</option>
+            <option value="years">Years</option>
+            <option value="months">Months</option>
+            <option value="weeks">Weeks</option>
+            <option value="days">Days</option>
+            <option value="hours">Hours</option>
+            <option value="minutes">Minutes</option>
+            <option value="seconds">Seconds</option>
+          </select>
+        </div>
+      </div>
     </div>
+
     <script src="main.js"></script>
   </body>
 </html>
