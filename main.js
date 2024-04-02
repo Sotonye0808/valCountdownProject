@@ -61,6 +61,7 @@ function updateCountdown(countdownDate, elementId) {
     document.getElementById(elementId).innerHTML = formatCountdown(countdownOptions);
 
     if (duration < 0) {
+        clearInterval(customCountdownInterval);
         document.getElementById(elementId).innerHTML = "Event has passed";
     }
 }
@@ -70,6 +71,7 @@ function updateCountdownOptions(countdownDate, elementId) {
     document.getElementById(elementId).innerHTML = formatCountdown(countdownOptions);
 
     if (countdownDate < new Date().getTime()) {
+        clearInterval(customCountdownInterval);
         document.getElementById(elementId).innerHTML = "Event has passed";
     }
 }
@@ -199,7 +201,7 @@ document.getElementById("countdownOptionsSelect").addEventListener("change", fun
 });
 
 // Interval for updating the custom countdown every 1 second
-const customCountdown = setInterval(function() {
+const customCountdownInterval = setInterval(function() {
     updateCountdown(customCountDownDate, "customCountdown");
     if (isEventDay(customCountDownDate)) {
         setBackground('default.jpg');
