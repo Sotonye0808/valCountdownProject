@@ -196,7 +196,7 @@ document.getElementById("customDateInput").addEventListener("change", function (
 });
 
 // Interval for updating the custom countdown every 1 second
-const customCountdownInterval = setInterval(function() {
+const customCountdown = setInterval(function() {
     updateCountdown(customCountDownDate, "customCountdown");
     if (isEventDay(customCountDownDate)) {
         setBackground('default.jpg');
